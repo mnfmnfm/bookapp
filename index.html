@@ -6,14 +6,28 @@
   <title>Books</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" type="text/css" media="screen" href="style.css" />
+  <script
+  src="https://code.jquery.com/jquery-3.3.1.min.js"
+  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+  crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.11/handlebars.min.js"></script>
   <script src="app.js"></script>
   <base href="https://mnfmnfm.github.io/bookapp/" />
 </head>
 <body>
+  <script id="book-template" type="text/x-handlebars-template">
+    <div class="book">
+      <h2>{{title}}</h2>
+      <h3>{{author}}</h3>
+      <div class="book-info">
+        {{description}}
+      </div>
+    </div>
+  </script>
   <h1>Books</h1>
   <a href="about">About us</a>
 
-  <section id="books">
+  <section id="book-list">
     the books go here (out of <span id="books-count">a number</span>)
   </section>
 </body>
